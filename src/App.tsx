@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { Currency } from "./types/currency";
+// @ts-ignore
 import Header from "./components/Header/index.tsx";
+// @ts-ignore
 import Main from "./components/Main/index.tsx";
+// @ts-ignore
 import style from "./App.module.scss";
 
 const App = () => {

@@ -1,4 +1,5 @@
 import { Currency } from "../../types/currency";
+// @ts-ignore
 import style from "./style.module.scss";
 
 const Header = (props: { rate: Currency[] }) => {

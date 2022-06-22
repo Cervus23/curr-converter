@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { Currency } from "../../types/currency";
+// @ts-ignore
 import style from "./style.module.scss";
 
 const Main = (props: { rate: Currency[] }) => {
