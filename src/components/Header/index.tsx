@@ -1,11 +1,11 @@
 import { Currency } from "../../types/currency";
-// import styles from './style.module.scss'
+import style from "./style.module.scss";
 
 const Header = (props: { rate: Currency[] }) => {
   return (
-    <header>
+    <header className={style.header}>
       {props.rate.map((currency: Currency) => (
-        <div key={currency.ccy}>
+        <div key={currency.ccy} className={style.currencyInfo}>
           {currency.ccy}: {currency.buy} / {currency.sale}
         </div>
       ))}

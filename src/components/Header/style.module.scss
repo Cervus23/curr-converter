@@ -1,0 +1,11 @@
+@import "../../scss/colors.scss";
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 30px;
+  align-items: center;
+  background-color: $headerBgrnd;
+  height: 30px;
+  padding-left: 20px;
+}

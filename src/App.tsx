@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Currency } from "./types/currency";
 import Header from "./components/Header/index.tsx";
 import Main from "./components/Main/index.tsx";
+import style from "./App.module.scss";
 
 const App = () => {
   const [exchangeRate, setExchangeRate] = useState<Currency[]>([]);
@@ -20,12 +21,8 @@ const App = () => {
       });
   }, []);
 
-  useEffect(() => {
-    console.log(exchangeRate);
-  }, [exchangeRate]);
-
   return (
-    <div className="App">
+    <div className={style.App}>
       <Header
         rate={exchangeRate.filter(
           (currency) => currency.ccy === "USD" || currency.ccy === "EUR"

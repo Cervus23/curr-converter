@@ -1,6 +1,6 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { Currency } from "../../types/currency";
-// import style from "./style.module.scss";
+import style from "./style.module.scss";
 
 const Main = (props: { rate: Currency[] }) => {
   const uah = { ccy: "UAH", base_ccy: "UAH", buy: "1", sale: "1" };
@@ -89,8 +89,10 @@ const Main = (props: { rate: Currency[] }) => {
   };
 
   return (
-    <form>
-      <div>
+    <div className={style.main}>
+      <h1>Currency converter</h1>
+      <div className={style.inputBox}>
+        <p>from:</p>
         <input
           type="number"
           ref={input}
@@ -101,7 +103,6 @@ const Main = (props: { rate: Currency[] }) => {
           onChange={(e) => selectionHandler(e.target.value, "input")}
           ref={inputSelect}
         >
-          {/* <option value="">Choose a currency type</option> */}
           <option value="UAH">UAH</option>
           {props.rate.map((currency) => (
             <option value={currency.ccy} key={currency.ccy}>
@@ -110,7 +111,8 @@ const Main = (props: { rate: Currency[] }) => {
           ))}
         </select>
       </div>
-      <div>
+      <div className={style.inputBox}>
+        <p>to:</p>
         <input
           type="number"
           ref={output}
@@ -129,7 +131,7 @@ const Main = (props: { rate: Currency[] }) => {
           ))}
         </select>
       </div>
-    </form>
+    </div>
   );
 };
 
