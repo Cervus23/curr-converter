@@ -49,6 +49,9 @@ const Main = (props: { rate: Currency[] }) => {
   const selectionHandler = (value: string, selectType: "input" | "output") => {
     switch (true) {
       case selectType === "input" && value === outputSelect.current!.value:
+        setInputCurr(
+          props.rate.filter((currency) => currency.ccy === value)[0]
+        );
         setOutputCurr(uah);
 
         outputSelect.current!.value = "UAH";
@@ -56,6 +59,9 @@ const Main = (props: { rate: Currency[] }) => {
 
       case selectType === "output" && value === inputSelect.current!.value:
         setInputCurr(uah);
+        setOutputCurr(
+          props.rate.filter((currency) => currency.ccy === value)[0]
+        );
 
         inputSelect.current!.value = "UAH";
         break;
