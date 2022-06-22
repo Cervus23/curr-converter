@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/curr-converter/static/css/main.28d7e2f3.css",
+    "main.js": "/curr-converter/static/js/main.d66b394f.js",
+    "index.html": "/curr-converter/index.html",
+    "main.28d7e2f3.css.map": "/curr-converter/static/css/main.28d7e2f3.css.map",
+    "main.d66b394f.js.map": "/curr-converter/static/js/main.d66b394f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.28d7e2f3.css",
+    "static/js/main.d66b394f.js"
+  ]
+}
