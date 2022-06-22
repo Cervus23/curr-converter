@@ -1,5 +1,7 @@
-Currency Converter
+### Currency Converter
+
 This is a test project which converts available currency, making a request to PrivatBank API.
 
-Demo
+### Demo
+
 https://cervus23.github.io/curr-converter/
